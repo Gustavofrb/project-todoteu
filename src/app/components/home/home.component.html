@@ -1,0 +1,97 @@
+<p-toolbar
+  id="toolbar"
+  styleClass="bg-gray-900 shadow-2"
+  [style]="{
+    position: 'fixed',
+    top: '0',
+    width: '100%',
+    height: '120px',
+    'background-image':
+      'linear-gradient(to right, var(--bluegray-500), var(--bluegray-800))',
+    transition: 'background-color 0.5s ease-in-out, opacity 0.3s ease-in-out',
+    opacity: toolbarOpacity
+  }"
+>
+  <ng-template pTemplate="start">
+    <img src="assets/Camping-branco.png" class="toolbar-logo" />
+  </ng-template>
+  <ng-template pTemplate="end">
+    <div class="flex align-items-center gap-2">
+      <nav>
+        <a href="#" class="nav-link">QUEM SOMOS</a>
+      </nav>
+      <nav>
+        <a href="#" class="nav-link">ONDE ESTAMOS</a>
+      </nav>
+      <nav>
+        <a href="#" class="nav-link">VOCACIONAL</a>
+      </nav>
+      <nav>
+        <a href="#" class="nav-link">DOAÇÕES</a>
+      </nav>
+      <nav>
+        <a href="#" class="nav-link">MIDIAS</a>
+      </nav>
+      <nav>
+        <a href="#" class="nav-link">LOJA</a>
+        <span
+          class="separator"
+          style="color: white; margin-right: 10px; margin-left: 10px"
+          >|</span
+        >
+        <!-- Barra vertical -->
+        <a
+          href="#"
+          style="color: white; margin-right: 15px; text-decoration: none"
+          (click)="ativarSidebar()"
+        >
+          <i class="pi pi-search"></i>
+        </a>
+
+        <p-sidebar [(visible)]="sidebarVisible3" position="top">
+          <input
+            type="text"
+            placeholder="Pesquisar"
+            pInputText
+            [(ngModel)]="termoPesquisa"
+          />
+          <button (click)="realizarPesquisa()">Pesquisar</button>
+          <!-- Adicione um botão ou ação para realizar a pesquisa -->
+        </p-sidebar>
+
+        <a
+          href="#"
+          style="color: white; margin-right: 15px; text-decoration: none"
+        >
+          <i class="pi pi-facebook"></i>
+        </a>
+
+        <a href="#" style="color: white; text-decoration: none">
+          <i class="pi pi-whatsapp"></i>
+        </a>
+        <!-- Ícone do WhatsApp -->
+      </nav>
+    </div>
+  </ng-template>
+</p-toolbar>
+
+<div
+  class="image-container"
+  style="
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  "
+>
+  <img [src]="imagemAtual" alt="Imagem Atual" class="pi-image" />
+</div>
+
+<a href="#" class="pi-btn" (click)="mostrarProximaImagem()">
+  <i class="pi pi-angle-right"></i>
+</a>
+
+<a href="#" class="pi-btn" (click)="mostrarImagemAnterior()">
+  <i class="pi pi-angle-left"></i>
+</a>
