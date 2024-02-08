@@ -1,15 +1,18 @@
 .container {
-
-    max-width: 100%;
+    width: 100%; /* Largura total */
     height: 200px;
-    margin: 20px auto;
-    margin-top: 0px;
+    
+    margin-bottom: 20px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    /* Ajuste o deslocamento horizontal para um valor negativo */
+    border-top: 1px solid #ccc; /* Linha superior */
+    border-bottom: 2px solid #ccc; /* Linha inferior */
+    box-sizing: border-box; /* Isso garante que a largura total inclua a borda */
     display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
 }
+
+
 
 .image-section {
     display: flex;
