@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
     this.startAutoScroll();
   }
 
-
   ativarSidebar() {
     this.sidebarVisible3 = !this.sidebarVisible3;
   }
@@ -63,6 +62,13 @@ export class HomeComponent implements OnInit {
     if (this.imagemAtualIndex > 0) {
       this.imagemAtualIndex--;
       this.imagemAtual = this.imagens[this.imagemAtualIndex];
+    }
+  }
+
+  scrollIntoView() {
+    const element = document.getElementById('quem-somos');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

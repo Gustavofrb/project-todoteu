@@ -13,13 +13,19 @@
   }"
 >
   <ng-template pTemplate="start">
-   <a href="#"><img src="assets/Camping-branco.png" class="toolbar-logo" /></a>
+    <a href="#"
+      ><img
+        src="assets/logotodoteupreta-removebg-preview.png"
+        class="toolbar-logo"
+    /></a>
   </ng-template>
+
   <ng-template pTemplate="end">
     <div class="flex align-items-center gap-2">
       <nav>
-        <a href="#" class="nav-link">QUEM SOMOS</a>
+        <a routerLink="/quem-somos" (click)="scrollIntoView()" class="nav-link">QUEM SOMOS</a>
       </nav>
+
       <nav>
         <a href="#" class="nav-link">ONDE ESTAMOS</a>
       </nav>
@@ -56,7 +62,6 @@
             [(ngModel)]="termoPesquisa"
           />
           <button (click)="realizarPesquisa()">Pesquisar</button>
-         
         </p-sidebar>
 
         <a
