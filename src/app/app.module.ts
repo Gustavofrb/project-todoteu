@@ -12,9 +12,10 @@ import { SidebarModule } from 'primeng/sidebar';
 import { InputTextModule } from 'primeng/inputtext';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
 import { HeaderService } from './services/header.service';
+import { WeareComponentComponent } from './components/weare-component/weare-component.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, FirstComponentComponent],
+  declarations: [AppComponent, HomeComponent, FirstComponentComponent, WeareComponentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

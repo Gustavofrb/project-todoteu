@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  margin-top: 0;
+}
+
+.logo {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: block; /* Certifique-se de que a imagem é exibida como bloco */
+  object-fit: cover; /* Isso garante que a imagem cubra completamente o contêiner */
+  box-sizing: border-box;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+h1,
+p {
+  margin: 0; /* Remover margens padrão */
+}
+
+.line {
+  width: 50px;
+  margin: 20px auto;
+  border: 1px solid #fff;
+}
